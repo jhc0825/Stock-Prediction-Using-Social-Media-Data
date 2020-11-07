@@ -3,13 +3,13 @@ In the report, you should describe your data set in greater detail. Describe how
 
 
 Dataset Description:
-    Features and examples present
-    Data scraping process
-    Data cleaning process
-    Preliminary analysis
-    2-3 Graphs or histograms and descriptions
-    Plans for model construction
-    Model evaluation criteria
+1.    Features and examples present
+2.    Data scraping process
+3.    Data cleaning process
+4.    Preliminary analysis
+5.    2-3 Graphs or histograms and descriptions
+6.    Plans for model construction
+7.    Model evaluation criteria
 
 Work Remaining:
     
