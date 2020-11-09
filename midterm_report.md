@@ -1,7 +1,5 @@
 # Midterm Report
 
----
-
 ## Dataset Description:
 ### Features and Examples:
 Our data consists of three main parts. We have data from twitter, data from reddit, and lastly stock return data. All the data spans from the beginning of July 2020 through the end of September 2020. We also chose to concentrate on five large tech companies. We chose Facebook (FB), Apple (AAPL), Amazon (AMZN), Netflix (NFLX), and Google (GOOG). These four companies are commonly referred to by the acronym “FAANG”. 
@@ -29,7 +27,17 @@ After scraping the reddit and twitter data we needed to clean it and then merge 
 ## Preliminary Analysis:
 After constructing our dataset we looked at a few basic descriptive statistics. We found that on average from the subreddits we scraped there are only about 2 posts per day on each company. The most talked about company by far was Apple with over 7 posts per day. Netflix, Facebook, and Google were posted about significantly less each averaging around 1 post per day. Since those three companies have so few posts it is unlikely we will be able to build a reliable predictor just from reddit data. However, the data on Apple is more encouraging. Not only does Apple have over 7 posts per day from the investing related subreddits, there is also the possibility of scraping data from the Apple specific subreddit in the future. Another interesting aspect of our data that we found was that each company has a similar number of upvotes per post. Posts on Google received around 36 upvotes on average which was the smallest of the five companies. Posts about Apple and Amazon received on average around 41 upvotes while posts on Facebook and Netflix received on average 52 and 55 upvotes per post. Looking at the twitter data we found that people were far more likely to tweet about Facebook and Amazon stock than Apple, Netflix, or Google stock. We also found that our twitter data for each company has a fairly wide range. Tweets about Facebook ranged from under 300,000 to over 750,000. 
 
+### Data Visualization
 We initially plotted scatter plots below for each of the companies in FAANG and showed the relationship between the number of Twitter posts containing the company’s ticker symbol and the daily returns of each company’s stock. Plotting these points, we calculated that the average correlation between the stock’s daily return and the number of posts is approximately 0.0527 with Netflix containing the strongest relationship at a correlation of 0.1407. So far, there seems to be a very weak linear relationship between twitter posts and stock daily returns, which would most likely lead us to search for more of a sophisticated model for our data.
 
+![Twitter Data](plots1.png)
+
+### Model Construction:
+Our ultimate goal of this project is to create a stock forecasting model based on the social media data we have. Initially, we will attempt to create a boolean classification model, which simply classifies whether a stock price will rise or not the next day depending on the social media sentiment of the past. This will give us a rough guidance on how to deal with our  features. 
+
+After doing so, we plan to create time series models using lags ranging from 1 week to 1 month. Our training set will be the data of August, which the features would include the data of July, and our test set will be the data of September, which includes the features of August. While incorporating various regression models for our time series models, we will do cross-validation for each type in order to determine which model fits the best.
+
+### Model Evaluation:
+One key concern about our model is that we are excluding the data of the weekends and holidays, when the stock market does not open. Thus, if our data appears to be too missing, we would have to come up with a new strategy to fill in the missing data. (i.e, averaging the closing price of the end of the week and opening stock price of the start of the week.) A stock forecasting model is highly vulnerable to overfitting. There are many noises in the market, and predicting future stock prices perfectly is nearly impossible. Thus, we do not expect our model to have an exceptionally low testing error, and avoiding overfitting would be the key to the success of our model. Thus, we would also incorporate regularization to our model to avoid it. 
 
 
