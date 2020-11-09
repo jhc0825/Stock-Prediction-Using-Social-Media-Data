@@ -29,14 +29,18 @@ After constructing our dataset we looked at a few basic descriptive statistics. 
 
 ### Data Visualization
 We initially plotted scatter plots below for each of the companies in FAANG and showed the relationship between the number of Twitter posts containing the company’s ticker symbol and the daily returns of each company’s stock. Plotting these points, we calculated that the average correlation between the stock’s daily return and the number of posts is approximately 0.0527 with Netflix containing the strongest relationship at a correlation of 0.1407. So far, there seems to be a very weak linear relationship between twitter posts and stock daily returns, which would most likely lead us to search for more of a sophisticated model for our data.
+
 <p align = "center">
   <img src = "/Plots/plots1.png">
   <img src = "/Plots/plots2.png">
 </p>
+
 In addition, we wanted to examine the relationship between daily returns and the daily counts of each social media posts. First, as shown in the hisogram below, the daily return of a stock price mostly ranges from -5% to 5%. Next, We hypothesized that if there are more posts on social media, the absolute value of the daily returns would increase under the assumption that when a stock price changes a lot, people would talk about it more. However, as shown in the plots below, classifying a positive return and a negative return only using the post counts seems impossible; neither for classifying absolute value of daily returns.
+
 <p align = "center">
   <img src = "/Plots/download-6.png">
 </p>
+
 Thus, we believe we will have to incorporate more features to our model, which we will explain more in detail in the next part.
 
 ## Next Steps:
