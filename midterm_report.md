@@ -30,9 +30,9 @@ After constructing our dataset we looked at a few basic descriptive statistics. 
 ### Data Visualization
 We initially plotted scatter plots below for each of the companies in FAANG and showed the relationship between the number of Twitter posts containing the company’s ticker symbol and the daily returns of each company’s stock. Plotting these points, we calculated that the average correlation between the stock’s daily return and the number of posts is approximately 0.0527 with Netflix containing the strongest relationship at a correlation of 0.1407. So far, there seems to be a very weak linear relationship between twitter posts and stock daily returns, which would most likely lead us to search for more of a sophisticated model for our data.
 
-![Twitter Data](/plots1.png) ![Twitter Data](/plots2.png) 
+![Twitter Data](/Plots/plots1.png) ![Twitter Data](/Plots/plots2.png) 
 
-![Data](/download-6.png) 
+![Data](/Plots/download-6.png) 
 
 ### Model Construction:
 Our ultimate goal of this project is to create a stock forecasting model based on the social media data we have. Initially, we will attempt to create a boolean classification model, which simply classifies whether a stock price will rise or not the next day depending on the social media sentiment of the past. This will give us a rough guidance on how to deal with our  features. 
