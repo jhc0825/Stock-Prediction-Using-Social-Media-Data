@@ -2,11 +2,11 @@
 
 ## Dataset Description:
 ### Features and Examples:
-Our data consists of three main parts. We have data from twitter, data from reddit, and lastly stock return data. All the data spans from the beginning of July 2020 through the end of September 2020. We also chose to concentrate on five large tech companies. We chose Facebook (FB), Apple (AAPL), Amazon (AMZN), Netflix (NFLX), and Google (GOOG). These five companies are commonly referred to by the acronym “FAANG”. 
+Our data consists of three main parts. We have data from twitter, data from reddit, and lastly stock return data. All the data spans from the beginning of July 2020 through the end of September 2020. We also chose to concentrate on five large tech companies. We chose Facebook (FB), Apple (AAPL), Amazon (AMZN), Netflix (NFLX), and Google (GOOG). These four companies are commonly referred to by the acronym “FAANG”. 
 
 For the twitter data we looked at how many times each company was mentioned every day from July through September. Each row of data corresponds to a specific date and company and includes the number of posts on that day referring to one of the five companies. 
 
-The reddit data was mainly scraped from two relevant “subreddits”, which are communities dedicated to a specific topic. We took data from the “stocks” subreddit and the “investing” subreddit. Our original dataset includes every post from each subreddit from the beginning of July to the end of September. This ended up being over 25,000 reddit posts. In addition to the title of each post it also includes how many “upvotes” or likes that post received as well as a timestamp. We then transformed this data by counting the number of posts and upvotes each company received per day. Every row of the transformed reddit dataset corresponds to a date and company, and has the total number of posts about the company and the total number of upvotes from those posts. 
+The reddit data was mainly scraped from two relevant “subreddits”, which are communities dedicated to a specific topic. We took data from the “stocks” subreddit and the “investing” subreddit. Our original dataset includes every post from each subreddit from the beginning of July to the end of September. This ended up being over 25,000 reddit posts. In addition to the title of each post it also includes how many “upvotes” or likes that post received as well as a timestamp. We then transformed this data by counting the number of posts and upvotes each company received per day. Every row of the transformed reddit dataset corresponds to a date and company and has the total number of posts about the company and the total number of upvotes from those posts. 
 
 Lastly we downloaded historical stock data for each of these companies and calculated daily returns. The historical stock data includes date, opening price, closing price, and volume. We then merged this data with our twitter and reddit dataset. 
 
@@ -27,12 +27,16 @@ After scraping the reddit and twitter data we needed to clean it and then merge 
 ## Preliminary Analysis:
 After constructing our dataset we looked at a few basic descriptive statistics. We found that on average from the subreddits we scraped there are only about 2 posts per day on each company. The most talked about company by far was Apple with over 7 posts per day. Netflix, Facebook, and Google were posted about significantly less each averaging around 1 post per day. Since those three companies have so few posts it is unlikely we will be able to build a reliable predictor just from reddit data. However, the data on Apple is more encouraging. Not only does Apple have over 7 posts per day from the investing related subreddits, there is also the possibility of scraping data from the Apple specific subreddit in the future. Another interesting aspect of our data that we found was that each company has a similar number of upvotes per post. Posts on Google received around 36 upvotes on average which was the smallest of the five companies. Posts about Apple and Amazon received on average around 41 upvotes while posts on Facebook and Netflix received on average 52 and 55 upvotes per post. Looking at the twitter data we found that people were far more likely to tweet about Facebook and Amazon stock than Apple, Netflix, or Google stock. We also found that our twitter data for each company has a fairly wide range. Tweets about Facebook ranged from under 300,000 to over 750,000. 
 
-### Data Visualization:
+### Data Visualization
 We initially plotted scatter plots below for each of the companies in FAANG and showed the relationship between the number of Twitter posts containing the company’s ticker symbol and the daily returns of each company’s stock. Plotting these points, we calculated that the average correlation between the stock’s daily return and the number of posts is approximately 0.0527 with Netflix containing the strongest relationship at a correlation of 0.1407. So far, there seems to be a very weak linear relationship between twitter posts and stock daily returns, which would most likely lead us to search for more of a sophisticated model for our data.
 
-![Twitter Data](/Plots/plots1.png) ![Twitter Data](/Plots/plots2.png) 
-
-![Data](/Plots/download-6.png) 
+<p float = "center">
+  <img src = "/Plots/plots1.png">
+  <img src = "/Plots/plots2.png">
+</p>
+<p align = "center">
+  <img src = "/Plots/download-6.png">
+</p>
 
 ## Next Steps:
 
