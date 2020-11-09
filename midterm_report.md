@@ -32,6 +32,8 @@ We initially plotted scatter plots below for each of the companies in FAANG and 
 
 ![Twitter Data](/plots1.png) ![Twitter Data](/plots2.png) 
 
+![Data](/download-6.png) 
+
 ### Model Construction:
 Our ultimate goal of this project is to create a stock forecasting model based on the social media data we have. Initially, we will attempt to create a boolean classification model, which simply classifies whether a stock price will rise or not the next day depending on the social media sentiment of the past. This will give us a rough guidance on how to deal with our  features. 
 
