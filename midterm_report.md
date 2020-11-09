@@ -34,6 +34,8 @@ We initially plotted scatter plots below for each of the companies in FAANG and 
 
 ![Data](/Plots/download-6.png) 
 
+## Next Steps:
+
 ### Model Construction:
 Our ultimate goal of this project is to create a stock forecasting model based on the social media data we have. Initially, we will attempt to create a boolean classification model, which simply classifies whether a stock price will rise or not the next day depending on the social media sentiment of the past. This will give us a rough guidance on how to deal with our  features. 
 
@@ -41,5 +43,4 @@ After doing so, we plan to create time series models using lags ranging from 1 w
 
 ### Model Evaluation:
 One key concern about our model is that we are excluding the data of the weekends and holidays, when the stock market does not open. Thus, if our data appears to be too missing, we would have to come up with a new strategy to fill in the missing data. (i.e, averaging the closing price of the end of the week and opening stock price of the start of the week.) A stock forecasting model is highly vulnerable to overfitting. There are many noises in the market, and predicting future stock prices perfectly is nearly impossible. Thus, we do not expect our model to have an exceptionally low testing error, and avoiding overfitting would be the key to the success of our model. Thus, we would also incorporate regularization to our model to avoid it. 
-
 
