@@ -35,13 +35,13 @@ We initially plotted scatter plots below for each of the companies in FAANG and 
   <img src = "/Plots/plots2.png">
 </p>
 
-In addition, we wanted to examine the relationship between daily returns and the daily counts of each social media posts. First, as shown in the hisogram below, the daily return of a stock price mostly ranges from -5% to 5%. Next, We hypothesized that if there are more posts on social media, the absolute value of the daily returns would increase under the assumption that when a stock price changes a lot, people would talk about it more. However, as shown in the plots below, classifying a positive return and a negative return only using the post counts seems impossible; neither for classifying absolute value of daily returns.
+In addition, we wanted to examine the relationship between daily returns and the daily counts of each social media posts. First, as shown in the hisogram below, the daily return of a stock price mostly ranges from -5% to 5%. Next, We hypothesized that if there are more posts on social media, the absolute value of the daily returns would increase under the assumption that when a stock price changes greatly, people would talk about it more. However, as shown in the plots below, the red and ble point are disperesed in a disordered fashion, indicating taht classifying a positive return and a negative return only using the post counts seems to be nearly impossible at this stage; neither for classifying absolute value of daily returns.
 
 <p align = "center">
   <img src = "/Plots/download-6.png">
 </p>
 
-Thus, we believe we will have to incorporate more features to our model, which we will explain more in detail in the next part.
+Thus, we believe we will have to incorporate more features and develop our model, which we will explain more in detail in the next part.
 
 ## Next Steps:
 
