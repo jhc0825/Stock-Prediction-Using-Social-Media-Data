@@ -25,8 +25,8 @@ The features in our dataset are for each day and company: number of tweets about
 ### Data Cleaning:
 After scraping the reddit and twitter data we needed to clean it and then merge it to the historical stock data. To clean the reddit data we first had to categorize each post by company. We did this with many hot encoding. We added a column to the reddit posts dataframe for each company and set it to 1 if that post was relevant to that company and 0 otherwise. Notably there were many posts that were not relevant to any of the five companies we are focusing on. After categorizing the posts we aggregated them by date and company to get the final data frame containing the number of posts and upvotes per company per day. We also removed weekends and days with no trading. We then merged both the reddit and twitter data with the historical stock data. 
 
-## Data Analysis and Model Construction:
-### Data Analysis:
+## Data Analysis:
+### Descriptive Overview:
 After constructing our dataset we looked at a few basic descriptive statistics. We found that on average from the subreddits we scraped there are only about 2 posts per day on each company. The most talked about company by far was Apple with over 7 posts per day. Netflix, Facebook, and Google were posted about significantly less each averaging around 1 post per day. Another interesting aspect of our data that we found was that each company has a similar number of upvotes per post. Posts on Google received around 36 upvotes on average which was the smallest of the five companies. Posts about Apple and Amazon received on average around 41 upvotes while posts on Facebook and Netflix received on average 52 and 55 upvotes per post. Looking at the twitter data we found that people were far more likely to tweet about Facebook and Amazon stock than Apple, Netflix, or Google stock. We also found that our twitter data for each company has a fairly wide range. Tweets about Facebook ranged from under 300,000 to over 750,000 per day. 
 
 ### Data Visualization
@@ -43,7 +43,12 @@ In addition, we examined the relationship between daily returns and the daily co
   <img src = "/Plots/download-6.png">
 </p>
 
-### Model Construction:
+## Model Construction:
+### Linear Regression Model:
+### Basic Classifier:
+### More Advanced Classifier:
+
+
 
 ## Weapon of Math Destruction:
 We do not believe our project has created a "Weapon of Math Destruction" since our models do not fit the three main criteria of a "Weapon of Math Destruction". 
