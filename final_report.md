@@ -5,7 +5,7 @@
 
 ## Dataset Description:
 ### Features and Examples:
-Our data consists of three main parts. We have data from twitter, data from reddit, and stock return data from Finnhub. All the data spans from the beginning of July 2020 through the end of September 2020. We also chose to concentrate on five large tech companies. We chose Facebook (FB), Apple (AAPL), Amazon (AMZN), Netflix (NFLX), and Google (GOOG). These four companies are commonly referred to by the acronym “FAANG”. 
+Our data consists of three main parts. We have data from twitter, data from reddit, and stock return data from Finnhub. All the data spans from the beginning of July 2020 through the end of September 2020. We also chose to concentrate on five large tech companies. We chose Facebook (FB), Apple (AAPL), Amazon (AMZN), Netflix (NFLX), and Google (GOOG). These five companies are commonly referred to by the acronym “FAANG”. 
 
 For the twitter data we looked at how many times each company was mentioned every day from July through September. Each row of data corresponds to a specific date and company and includes the number of posts on that day referring to one of the five companies. 
 
