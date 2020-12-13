@@ -45,9 +45,13 @@ In addition, we wanted to examine the relationship between daily returns and the
 
 Thus, we believe we will have to incorporate more features and develop our model
 
-## Model Construction:
+### Model Construction:
 
-
+## Weapon of Math Destruction:
+We do not believe our project has created a "Weapon of Math Destruction" since our models do not fit the three main criteria of a "Weapon of Math Destruction". 
+1. Our model has easily measurable outcomes. The goal of our model is not ambigous and we are able to directly measure our results.
+2. The predictions given by our model do not have negative or unintended consequences. Our predictions do not affect the well being of others or the health of any of the companies we performed analysis on. 
+3. Our models do not create feedback loops. The output of our model does not have any affect on the inputs and therefore we are not worried about creating a feedback loop. 
 
 
 
