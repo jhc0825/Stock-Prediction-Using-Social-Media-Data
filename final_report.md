@@ -13,10 +13,10 @@ The reddit data was mainly scraped from two relevant “subreddits”, which are
 
 Lastly, we downloaded historical stock data for each of these companies and calculated daily returns. The historical stock data includes date, opening price, closing price, and volume. We then merged this data with our twitter and reddit dataset. 
 
-The features in our dataset we are currently considering are for each day and company: number of tweets about a company, number of reddit posts about a company, and number of upvotes those reddit posts received. The examples in our dataset are the daily returns for each company. 
+The features in our dataset are for each day and company: number of tweets about a company, number of reddit posts about a company, and number of upvotes those reddit posts received. The examples in our dataset are the daily returns for each company. 
 
 ### Data Scraping:
-**Reddit:** In order to scrape the reddit data we used a combination of the Reddit API and a custom function that is part of the PushShift API in order to download posts from any time period. Since these APIs only allow downloading 100 posts at a time we ran a loop that downloaded posts in one hour time periods. We also added some error handling to the function so deleted posts would not cause the download to break. Overall, we scraped over 25,000 posts and it took about 10 hours to download all the posts.
+**Reddit:** In order to scrape the reddit data we used a combination of the Reddit API and a custom function that is part of the PushShift API in order to download posts from any time period. Since these APIs only allow downloading 100 posts at a time we ran a loop that downloaded posts in one hour time periods. We also added some error handling to the function so deleted posts would not cause the download to break. Overall, we scraped over 25,000 posts and it took over 10 hours of continuous scraping to download all the posts. 
 
 **Twitter:** The Twitter data was scraped through the Twitter Search API that allows you to search past tweets on Twitter through a query. Initially, the API only allows the user to search tweets going back to seven days. You can only query the whole archive of tweets through the premium package, which is what we did. Next, while dealing with a limited number of API requests for Twitter, we decided to query the number of posts that contains each of the five companies’ ticker symbols for each day from July to October.
 
@@ -27,23 +27,21 @@ After scraping the reddit and twitter data we needed to clean it and then merge 
 
 ## Data Analysis and Model Construction:
 ### Data Analysis:
-After constructing our dataset we looked at a few basic descriptive statistics. We found that on average from the subreddits we scraped there are only about 2 posts per day on each company. The most talked about company by far was Apple with over 7 posts per day. Netflix, Facebook, and Google were posted about significantly less each averaging around 1 post per day. Since those three companies have so few posts it is unlikely we will be able to build a reliable predictor just from reddit data. However, the data on Apple is more encouraging. Not only does Apple have over 7 posts per day from the investing related subreddits, there is also the possibility of scraping data from the Apple specific subreddit in the future. Another interesting aspect of our data that we found was that each company has a similar number of upvotes per post. Posts on Google received around 36 upvotes on average which was the smallest of the five companies. Posts about Apple and Amazon received on average around 41 upvotes while posts on Facebook and Netflix received on average 52 and 55 upvotes per post. Looking at the twitter data we found that people were far more likely to tweet about Facebook and Amazon stock than Apple, Netflix, or Google stock. We also found that our twitter data for each company has a fairly wide range. Tweets about Facebook ranged from under 300,000 to over 750,000. 
+After constructing our dataset we looked at a few basic descriptive statistics. We found that on average from the subreddits we scraped there are only about 2 posts per day on each company. The most talked about company by far was Apple with over 7 posts per day. Netflix, Facebook, and Google were posted about significantly less each averaging around 1 post per day. Another interesting aspect of our data that we found was that each company has a similar number of upvotes per post. Posts on Google received around 36 upvotes on average which was the smallest of the five companies. Posts about Apple and Amazon received on average around 41 upvotes while posts on Facebook and Netflix received on average 52 and 55 upvotes per post. Looking at the twitter data we found that people were far more likely to tweet about Facebook and Amazon stock than Apple, Netflix, or Google stock. We also found that our twitter data for each company has a fairly wide range. Tweets about Facebook ranged from under 300,000 to over 750,000 per day. 
 
 ### Data Visualization
-We initially plotted scatter plots below for each of the companies in FAANG and showed the relationship between the number of Twitter posts containing the company’s ticker symbol and the daily returns of each company’s stock. Plotting these points, we calculated that the average correlation between the stock’s daily return and the number of posts is approximately 0.0527 with Netflix containing the strongest relationship at a correlation of 0.1407. So far, there seems to be a very weak linear relationship between twitter posts and stock daily returns, which would most likely lead us to search for more of a sophisticated model for our data.
+We plotted scatter plots below for each of the companies in FAANG to demonstrate the relationship between the number of Twitter posts containing the company’s ticker symbol and the daily returns of each company’s stock. Plotting these points, we calculated that the average correlation between the stock’s daily return and the number of posts is approximately 0.0527 with Netflix containing the strongest relationship at a correlation of 0.1407. There seems to be a very weak linear relationship between twitter posts and stock daily returns.
 
 <p align = "center">
   <img src = "/Plots/plots1.png">
   <img src = "/Plots/plots2.png">
 </p>
 
-In addition, we wanted to examine the relationship between daily returns and the daily counts of each social media posts. First, as shown in the hisogram below, the daily return of a stock price mostly ranges from -5% to 5%. Next, We hypothesized that if there are more posts on social media, the absolute value of the daily returns would increase under the assumption that when a stock price changes greatly, people would talk about it more. However, as shown in the plots below, the red and ble point are disperesed in a disordered fashion, indicating that classifying a positive return and a negative return only using the post counts seems to be nearly impossible at this stage; neither for classifying absolute value of daily returns.
+In addition, we examined the relationship between daily returns and the daily counts of each social media posts. First, as shown in the hisogram below, the daily return of a stock price mostly ranges from -5% to 5%. Next, We hypothesized that if there are more posts on social media, the absolute value of the daily returns would increase under the assumption that when a stock price changes greatly, people would talk about it more. However, as shown in the plots below, the red and ble point are disperesed in a disordered fashion, indicating that classifying a positive return and a negative return only using the post counts seems to be nearly impossible.
 
 <p align = "center">
   <img src = "/Plots/download-6.png">
 </p>
-
-Thus, we believe we will have to incorporate more features and develop our model
 
 ### Model Construction:
 
