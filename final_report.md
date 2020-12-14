@@ -77,14 +77,14 @@ Instead of using logistic loss, we decided to use hinge loss and quadratic regul
   <img width = "500" src = "/Plots/whole.png">
 </p>
 
-As shown by the plot above, the model performs generally well. As we increase the number of days used for our times series lags, the misclassification error decreased. However, as we modeled this using the entire dataset, this does not give an accurate estimation of the model. Thus, as mentioned above, we split our data into August and September, let our model learn on our August data and tested the model using the September data. Our results are shown below. 
+As shown by the plot above, the model performs generally well. As we increase the number of days used for our times series lags, the misclassification error decreased. However, as we modeled this using the entire dataset, this does not give an accurate estimation of the model. Thus, as mentioned above, we split our data into July/August and September, let our model learn on our July/August data and tested the model using the September data. Our results are shown below. 
 
 <p align = "center">
   <img width = "500" src = "/Plots/train.png">
   <img width = "500" src = "/Plots/test.png">
 </p>
 
-For our training data, there is a general descending trend as the number of days used for the time serires increases. Interestingly, when our lag days go beyond 10 days, the misclassification error on the training set appeared to have an ascending trend. Nonetheless, on our testing data, we got misclassification rate of less than 50% on our data except for Apple and Facebook. Similarly to our logistic loss model, our hinge loss model also predicted that the Apple stock would always go up; thus, we had a constant misclassification error of 0.6190 for all the time series. Surprisingly, we got the best result when we incorporated all 5 companies to modeling. Unlike modeling each company separately, when we used the data of all 5 companies, the misclassification rate declined as we used more lag days. Ultimately, when we used 20 lag days, our misclassification rate for the test set was 0.4571. 
+For our training data, there is a general descending trend as the number of days used for the time series increases. Interestingly, when our lag days go beyond 10 days, the misclassification error on the training set appeared to have an ascending trend. Nonetheless, on our testing data, we got misclassification rate of less than 50% on our data except for Apple and Facebook. Similarly to our logistic loss model, our hinge loss model also predicted that the Apple stock would always go up; thus, we had a constant misclassification error of 0.6190 for all the time series. Surprisingly, we got the best result when we incorporated all 5 companies to modeling. Unlike modeling each company separately, when we used the data of all 5 companies, the misclassification rate declined as we used more lag days. Ultimately, when we used 20 lag days, our misclassification rate for the test set was 0.4571. 
 
 ## Conclusion and Further Work:
 
