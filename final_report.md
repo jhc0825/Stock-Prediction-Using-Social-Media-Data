@@ -90,7 +90,7 @@ For our training data, there is a general descending trend as the number of days
 
 ## Conclusion:
 Our initial goal of this project was to create a model with a mean error rate of less than 50%. Ultimately, using hinge-loss and quadratic regularizer, with time series lag, we achieved a misclassification rate of 0.4571 when using the data of all 5 companies.
-Despite the favorable result, in order to develop our model, more data would be needed. Since we only examined the technology sector of the stock market, if we include more companies from various industries, we would achieve a more substantial forecast to the stock market.
+Despite the favorable result, in order to develop our model, more data would be needed. Since we only examined the technology sector of the stock market, if we include more companies from various industries, we would achieve a more substantial forecast to the stock market. Data over a longer time period would also help improve our accuracy and confidence in our model.
 
 
 ## Weapon of Math Destruction:
