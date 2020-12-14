@@ -50,7 +50,7 @@ Next, we’ll try to add polynomial transformation to our model. When putting ea
 
 <p align = "center">
   <img src = "/Plots/Google.png" width="300" height="300" />
-  <img src = "/Plots/FAAN.png" width="300" height="300" />
+  <img src = "/Plots/FAAN.png" width="400" height="400" />
 </p>
 
 ### Basic Classifier and Apple Specific Model:
