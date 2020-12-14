@@ -37,7 +37,7 @@ We plotted scatter plots below for each of the companies in FAANG to demonstrate
   <img src = "/Plots/plots2.png">
 </p>
 
-In addition, we examined the relationship between daily returns and the daily counts of each social media posts. First, as shown in the hisogram below, the daily return of a stock price mostly ranges from -5% to 5%. Next, We hypothesized that if there are more posts on social media, the absolute value of the daily returns would increase under the assumption that when a stock price changes greatly, people would talk about it more. However, as shown in the plots below, the red and ble point are disperesed in a disordered fashion, indicating that classifying a positive return and a negative return only using the post counts seems to be nearly impossible.
+In addition, we examined the relationship between daily returns and the daily counts of each social media posts. First, as shown in the histogram below, the daily return of a stock price mostly ranges from -5% to 5%. Next, We hypothesized that if there are more posts on social media, the absolute value of the daily returns would increase under the assumption that when a stock price changes greatly, people would talk about it more. However, as shown in the plots below, the red and blue point are dispersed in a disordered fashion, indicating that classifying a positive return and a negative return only using the post counts seems to be nearly impossible.
 
 <p align = "center">
   <img src = "/Plots/download-6.png">
@@ -58,7 +58,7 @@ Finally, we dig deeper into the feature engineering of our model by including Re
 
 ### Classification Model:
 
-After learning that our linear regression model could not get an accurate predication model, we decided to create a forecasting classification model to predict whether the daily return would be positive or negative. Ultimately, our y for this model would be a boolean which is true if the return is positive and false if the return is negative.
+After learning that our linear regression model could not get an accurate prediction model, we decided to create a forecasting classification model to predict whether the daily return would be positive or negative. Ultimately, our y for this model would be a boolean which is true if the return is positive and false if the return is negative.
 
 The following is a simple classification model with minimal feature transformations. For this model we only used the features of the number of tweets, the number of reddit posts, and the number of upvotes. After randomly shuffling the data, we split it into training and testing sets using 60% of the data for training and 40% for testing. We then fit a logistic regression with a quadratic regularizer to the data. We chose logistic loss since it is well suited for binary classification problems like this one. This simple model ended up being not particularly effective and gave us a misclassification error of 47% on our test set. Furthermore, the model did not make “distinct” predictions and instead learned to always predict “positive”.
 
@@ -79,7 +79,7 @@ Instead of using logistic loss, we decided to use hinge loss and quadratic regul
   <img width = "500" src = "/Plots/whole.png">
 </p>
 
-As shown by the plot above, the model performs generally well. As we increase the number of days used for our times series lag, the misclassification error decreased. However, as we modeled this using the entire dataset, this does not give an accurate estimation of the model. Thus, as mentioned above, we split our data into August and September, let our model learn on our August data and tested the model using the September data. Our result is shown below. 
+As shown by the plot above, the model performs generally well. As we increase the number of days used for our times series lag, the misclassification error decreased. However, as we modeled this using the entire dataset, this does not give an accurate estimation of the model. Thus, as mentioned above, we split our data into August and September, let our model learn on our August data and tested the model using the September data. Our results are shown below. 
 
 <p align = "center">
   <img width = "500" src = "/Plots/train.png">
