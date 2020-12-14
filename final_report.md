@@ -84,6 +84,8 @@ As shown by the plot above, the model performs generally well. As we increase th
   <img width = "500" src = "/Plots/test.png">
 </p>
 
+For our training data, there is a general descending trend as the number of days used for the time series increases. Interestingly, when our lag days go beyond 10 days, the misclassification error on the training set appeared to have an ascending trend. Nonetheless, on our testing data, we got a misclassification rate of less than 50% on our data except for Apple and Facebook. Similarly to our logistic loss model, our hinge loss model also predicted that the Apple stock would always go up; thus, we had a constant misclassification error of 0.6190 for all the time series. Surprisingly, we got the best result when we incorporated all 5 companies to modeling. Unlike modeling each company separately, when we used the data of all 5 companies, the misclassification rate declined as we used more lag days. Ultimately, when we used 20 lag days, our misclassification rate for the test set was 0.4571.
+
 ## Weapon of Math Destruction:
 We do not believe our project has created a "Weapon of Math Destruction" since our models do not fit the three main criteria of a "Weapon of Math Destruction". 
 1. Our model has easily measurable outcomes. The goal of our model is not ambigous and we are able to directly measure our results.
