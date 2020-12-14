@@ -79,6 +79,10 @@ Instead of using logistic loss, we decided to use hinge loss and quadratic regul
 
 As shown by the plot above, the model performs generally well. As we increase the number of days used for our times series lags, the misclassification error decreased. However, as we modeled this using the entire dataset, this does not give an accurate estimation of the model. Thus, as mentioned above, we split our data into August and September, let our model learn on our August data and tested the model using the September data. Our result is shown below. 
 
+<p align = "center">
+  <img width = "500" src = "/Plots/train.png">
+  <img width = "500" src = "/Plots/test.png">
+</p>
 
 ## Weapon of Math Destruction:
 We do not believe our project has created a "Weapon of Math Destruction" since our models do not fit the three main criteria of a "Weapon of Math Destruction". 
