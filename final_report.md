@@ -49,8 +49,8 @@ First, we try to model the FAANG returns with linear regression, involving diffe
 Next, we’ll try to add polynomial transformation to our model. When putting each company’s data through polynomial regression, we witness very low mean squared error values for each company, which most likely means the polynomial results in overfitting. We’ve adjusted the polynomial model through various degrees and most of the models result in overfitting. As we look at the models below, we see that the randomness of our data makes our polynomial model difficult to fit. The presence of outliers in the data has a deep effect of the outcome we receive in the predicted returns. Polynomial regressions are not resistant to the hyper volatility that occurs frequently on Twitter.
 
 <p align = "center">
-  <img src = "/Plots/Google.png" width="200" height="200" />
-  <img src = "/Plots/FAAN.png">
+  <img src = "/Plots/Google.png" width="300" height="300" />
+  <img src = "/Plots/FAAN.png" width="300" height="300" />
 </p>
 
 ### Basic Classifier and Apple Specific Model:
