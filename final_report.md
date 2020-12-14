@@ -74,7 +74,7 @@ As we believed our logistic loss classification model was not enough, we came up
 Instead of using logistic loss, we decided to use hinge loss and quadratic regularizer on our data. Initially, we generated a classifier model on the entire dataset and the misclassification error was roughly 0.5048, which we thought was better than we expected as the goal of this model was to produce a model that has an error rate of less than 50%. Then, we did a time series lag on the model using 1, 5, 10, 15, 20 days. The misclassification error of each day turned out to be 0.5048, 0.5381, 0.4524, 0.4286, 0.4091. As displayed by the number, it is currently evident that the model generally classifies better, as we take into account more prior days of the data. Then we performed the same method but with time series lags with 1, 5, 10, 15, 20 days, and, in addition, we decided to create a model separately for each companies as well. 
 
 <p align = "center">
-  <img width = "1000" src = "/Plots/whole.png">
+  <img width = "500" src = "/Plots/whole.png">
 </p>
 
 As shown by the plot above, the model performs generally well. As we increase the number of days used for our times series lags, the misclassification error decreased. However, as we modeled this using the entire dataset, this does not give an accurate estimation of the model. Thus, as mentioned above, we split our data into August and September, let our model learn on our August data and tested the model using the September data. Our result is shown below. 
