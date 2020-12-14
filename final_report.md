@@ -53,6 +53,8 @@ Next, we’ll try to add polynomial transformation to our model. When putting ea
   <img src = "/Plots/FAAN.png" width="400" height="400" />
 </p>
 
+Finally, we dig deeper into the feature engineering of our model by including Reddit into our model. We’ll multiply the tweet activity and reddit activity to form one column to use in a linear regression model again. This results in a linear regression model that is similar to the first linear regression model that was developed. All the R-squared values that were produced are all negative for each company, implying no relationship between the two social media sites. Again, it shows that linear regression isn’t the appropriate model to use to predict stock returns based on the data from Twitter and Reddit.
+
 ### Basic Classifier and Apple Specific Model:
 The following is a simple classification model with minimal feature transformations. We attempted to fit a model that would determine whether or not returns for a specific day would be positive or negative based on the number of tweets, the number of reddit posts, and the number of upvotes. We split our data into training and testing sets using 60% of the data for training and 40% for testing. We then fit a logistic regression with a quadratic regularizer to the data. We chose logistic loss since it is well suited for binary classification problems like this one. This simple model ended up being not particularly effective and gave us a misclassification error of 47% on our test set. Furthermore, the model did not make “distinct” predictions and instead learned to always predict “positive”.
 
